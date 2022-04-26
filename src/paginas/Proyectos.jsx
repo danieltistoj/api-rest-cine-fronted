@@ -13,11 +13,11 @@ const Proyectos = () => {
 
         {msg && <Alerta alerta={alerta} />}
 
-        <div className="bg-white shadow mt-10 rounded-lg  ">
+        <div className="bg-white shadow mt-10 rounded-lg flex  flex-wrap space-x-6 px-16">
             {proyectos.length ? 
               proyectos.map(proyecto => (
                   <PreviewProyecto 
-                  className="grid grid-cols-3 gap-4"
+                  className=""
                       key={proyecto._id}
                       proyecto={proyecto}
                   />
