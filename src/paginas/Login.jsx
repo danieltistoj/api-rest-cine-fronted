@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <>
         <h1 className="text-sky-600 font-black text-6xl capitalize text-center">Inicia sesión {''}
-            <span className="text-slate-700">proyectos</span>
+            <span className="text-slate-700"></span>
             <img src={loginImg} />
         </h1>
 
@@ -61,7 +61,7 @@ const Login = () => {
                 <label 
                     className="uppercase text-gray-600 block text-xl font-bold"
                     htmlFor="email"
-                >Email</label>
+                >Correo Electronico</label>
                 <input
                     id="email"
                     type="email"
@@ -75,7 +75,7 @@ const Login = () => {
                 <label 
                     className="uppercase text-gray-600 block text-xl font-bold"
                     htmlFor="password"
-                >Password</label>
+                >Contraseña</label>
                 <input
                     id="password"
                     type="password"

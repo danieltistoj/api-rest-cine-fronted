@@ -95,7 +95,7 @@ const Registrar = () => {
                 <label 
                     className="uppercase text-gray-600 block text-xl font-bold"
                     htmlFor="email"
-                >Email</label>
+                >Correo Electronico</label>
                 <input
                     id="email"
                     type="email"
@@ -109,7 +109,7 @@ const Registrar = () => {
                 <label 
                     className="uppercase text-gray-600 block text-xl font-bold"
                     htmlFor="password"
-                >Password</label>
+                >Contraseña</label>
                 <input
                     id="password"
                     type="password"
@@ -124,7 +124,7 @@ const Registrar = () => {
                 <label 
                     className="uppercase text-gray-600 block text-xl font-bold"
                     htmlFor="password2"
-                >Repetir Password</label>
+                >Repetir Contraseña</label>
                 <input
                     id="password2"
                     type="password"

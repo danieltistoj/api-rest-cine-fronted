@@ -176,15 +176,7 @@ const ProyectosProvider = ({children}) => {
             const proyectosActualizados = proyectos.filter(proyectoState => proyectoState._id !== id )
             setProyectos(proyectosActualizados)
 
-            setAlerta({
-                msg: data.msg,
-                error: false
-            })
-
-            setTimeout(() => {
-                setAlerta({})
-                navigate('/peliculas')
-            }, 3000);
+    
         } catch (error) {
             console.log(error)
         }

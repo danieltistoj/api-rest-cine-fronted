@@ -22,6 +22,7 @@ const FormularioProyecto = () => {
             setDescripcion(proyecto.descripcion)
             setFechaEntrega(proyecto.fechaEntrega?.split('T')[0])
             setCliente(proyecto.cliente)
+            setImagen(proyecto.imagen)
         } 
     }, [params])
 

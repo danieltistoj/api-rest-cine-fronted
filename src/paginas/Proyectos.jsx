@@ -22,7 +22,7 @@ const Proyectos = () => {
                       proyecto={proyecto}
                   />
               ))
-            : <p className=" text-center text-gray-600 uppercase  p-5">No hay proyectos aún</p>}
+            : <p className=" text-center text-gray-600 uppercase  p-5">No Existen Peliculas aún</p>}
         </div>
     </>
   )

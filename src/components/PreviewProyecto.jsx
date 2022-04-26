@@ -7,12 +7,40 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useParams } from 'react-router-dom'
+import useProyectos from "../hooks/useProyectos"
+
 
 import { formatearFecha } from "../helpers/formatearFecha";
 const PreviewProyecto = ({ proyecto }) => {
   const { auth } = useAuth();
+  const params = useParams();
+
+  const { eliminarProyecto } = useProyectos()
 
   const { nombre, _id, cliente, creador, descripcion, fechaEntrega, imagen } = proyecto;
+
+
+  const handleClick = () => {
+    Swal.fire({
+      title: 'Estas seguro en Eliminar la Pelicula?',
+      text: `${nombre}`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, Eliminar esta pelicula!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Eliminado!',
+          'Se ha eliminado correctamente.',
+          'success'
+        )
+        eliminarProyecto(_id)
+      }
+    })
+}
 
   return (
         
@@ -40,8 +68,12 @@ const PreviewProyecto = ({ proyecto }) => {
 
           </CardContent>
           <CardActions>
-            <Button size="small">Editar</Button>
-            <Button size="small">Eliminar Pelicula</Button>
+            
+            <Link 
+                  to={`/peliculas/editar/${_id}`}
+                  className='uppercase font-bold'
+                >Editar</Link>
+            <Button size="small" onClick={handleClick} >Eliminar Pelicula</Button>
           </CardActions>
 
         </Card>
