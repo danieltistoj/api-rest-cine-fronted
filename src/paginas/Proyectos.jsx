@@ -13,7 +13,7 @@ const Proyectos = () => {
 
         {msg && <Alerta alerta={alerta} />}
 
-        <div className="bg-white shadow mt-10 rounded-lg flex  flex-wrap space-x-6 px-16">
+        <div className="bg-white shadow mt-10 rounded-lg flex  flex-wrap space-x-6 px-16 py-10">
             {proyectos.length ? 
               proyectos.map(proyecto => (
                   <PreviewProyecto 

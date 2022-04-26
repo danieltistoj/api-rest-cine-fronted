@@ -44,7 +44,7 @@ const PreviewProyecto = ({ proyecto }) => {
 
   return (
         
-        <Card sx={{ maxWidth: 500 }}>
+        <Card sx={{ maxWidth: 300 }}>
           <CardMedia
             component="img"
             alt="green iguana"
